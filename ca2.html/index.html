@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroShield | Insect Pesticide Identification in Crops</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-in {
+            animation: slideIn 0.8s ease-out forwards;
+        }
+        .crop-slide {
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        .crop-slide:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation (Unchanged) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+            <i class="fas fa-bug text-2xl"></i>
+            <span class="text-xl font-bold"><a href="index.html" class="hover:text-green-200">AgroShield</a></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-green-200">Home</a>
+                <a href="services.html" class="hover:text-green-200">Services</a>
+                <a href="identification.html" class="hover:text-green-200">Identification</a>
+                <a href="resources.html" class="hover:text-green-200">Resources</a>
+                <a href="contact.html" class="hover:text-green-200">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-green-800 px-4 py-2" id="mobile-menu">
+            <a href="index.html" class="block py-2 hover:text-green-200">Home</a>
+            <a href="services.html" class="block py-2 hover:text-green-200">Services</a>
+            <a href="identification.html" class="block py-2 hover:text-green-200">Identification</a>
+            <a href="resources.html" class="block py-2 hover:text-green-200">Resources</a>
+            <a href="contact.html" class="block py-2 hover:text-green-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Updated) -->
+<!-- Hero Section with Floating Text Animation -->
+<section id="home" class="text-white py-20 relative overflow-hidden">
+    <!-- Background image with overlay to maintain text readability -->
+    <div class="absolute inset-0 z-0">
+        <img src="field img.png" 
+             alt="Farm background" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+            <!-- Floating Heading -->
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-float" style="animation-delay: 0.1s;">
+                Precision Pesticide Identification for Healthier Crops
+            </h1>
+            
+            <!-- Floating Paragraph -->
+            <p class="text-xl mb-8 animate-float" style="animation-delay: 0.4s;">
+                Detect pesticide residues, identify harmful chemicals, and receive eco-friendly treatment solutions to protect your harvest.
+            </p>
+            
+            <!-- Buttons Container (floating together) -->
+            <div class="flex space-x-4 animate-float" style="animation-delay: 0.6s;">
+                <a href="identification.html" class="bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    <i class="fas fa-search mr-2"></i>Identify Pesticides
+                </a>
+                <a href="#resources" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition duration-300">
+                    <i class="fas fa-book mr-2"></i>Learn More
+                </a>
+            </div>
+        </div>
+        
+        <!-- You can keep this image container if you want a secondary image, or remove it -->
+        <div class="md:w-1/2 flex justify-center"> 
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes float {
+        0% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .animate-float {
+        animation: float 0.8s ease-out forwards;
+    }
+</style>
+
+<style>
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+</style>
+
+    <!-- Crop Protection Slideshow -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Protecting Key Agricultural Crops</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="crop-slide bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="rice.jpeg" alt="Rice field" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Rice Protection</h3>
+                        <p class="text-gray-600 mb-4">Common pesticides: Chlorpyrifos, Carbofuran, Malathion</p>
+                        <a href="rice.html" class="text-green-600 font-medium hover:underline">Detection Methods →</a>
+                    </div>
+                </div>
+                
+                <div class="crop-slide bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="wheat.jpeg" alt="Wheat field" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Wheat Protection</h3>
+                        <p class="text-gray-600 mb-4">Common pesticides: Glyphosate, 2,4-D, Dicamba</p>
+                        <a href="wheat.html" class="text-green-600 font-medium hover:underline">Safe Alternatives →</a>
+                    </div>
+                </div>
+                
+                <div class="crop-slide bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="corn.jpeg" alt="Corn field" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Corn Protection</h3>
+                        <p class="text-gray-600 mb-4">Common pesticides: Atrazine, Metolachlor, Acetochlor</p>
+                        <a href="corn.html" class="text-green-600 font-medium hover:underline">Residue Analysis →</a>
+                    </div>
+                </div>
+                
+                <div class="crop-slide bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="vege.jpeg" alt="Vegetable farm" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-700">Vegetable Protection</h3>
+                        <p class="text-gray-600 mb-4">Common pesticides: Imidacloprid, Cypermethrin, Mancozeb</p>
+                        <a href="vege.html" class="text-green-600 font-medium hover:underline">Organic Solutions →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Advanced Detection Technology</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-in">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="AI Technology" class="rounded-lg shadow-xl border-4 border-white">
+                </div>
+                <div class="animate-slide-in" style="animation-delay: 0.3s;">
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-microscope text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Spectroscopic Analysis</h3>
+                                <p class="text-gray-600">Using advanced spectroscopy to detect pesticide residues at molecular levels with 98% accuracy.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-robot text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">AI-Powered Identification</h3>
+                                <p class="text-gray-600">Machine learning algorithms trained on thousands of pesticide samples for precise classification.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-mobile-alt text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Mobile Integration</h3>
+                                <p class="text-gray-600">Instant analysis through our mobile app with real-time results and recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Process Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">From Detection to Solution</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="hidden md:block absolute left-1/2 h-full w-1 bg-green-200 transform -translate-x-1/2 z-0"></div>
+                    
+                    <!-- Process Step 1 -->
+                    <div class="mb-12 md:flex justify-between items-center">
+                        <div class="md:w-5/12 md:pr-8 mb-6 md:mb-0 animate-slide-in">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <div class="text-green-600 mb-3">
+                                    <i class="fas fa-camera text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Sample Collection</h3>
+                                <p class="text-gray-600">Submit crop samples or photos through our platform. Our system accepts leaves, soil, or water samples for comprehensive analysis.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex md:w-3/12 justify-center">
+                            <div class="h-12 w-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl z-10">1</div>
+                        </div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+                    
+                    <!-- Process Step 2 -->
+                    <div class="mb-12 md:flex justify-between items-center">
+                        <div class="md:w-5/12"></div>
+                        <div class="hidden md:flex md:w-2/12 justify-center">
+                            <div class="h-12 w-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl z-0">2</div>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 mb-6 md:mb-0 animate-slide-in" style="animation-delay: 0.2s;">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <div class="text-green-600 mb-3">
+                                    <i class="fas fa-flask text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Laboratory Analysis</h3>
+                                <p class="text-gray-600">Our certified labs conduct GC-MS and HPLC tests to identify pesticide compounds and their concentration levels.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Process Step 3 -->
+                    <div class="mb-12 md:flex justify-between items-center">
+                        <div class="md:w-5/12 md:pr-8 mb-6 md:mb-0 animate-slide-in" style="animation-delay: 0.4s;">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <div class="text-green-600 mb-3">
+                                    <i class="fas fa-file-alt text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Detailed Report</h3>
+                                <p class="text-gray-600">Receive a comprehensive report within 24-48 hours detailing detected pesticides, safety levels, and potential health impacts.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex md:w-2/12 justify-center">
+                            <div class="h-12 w-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl">3</div>
+                        </div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+                    
+                    <!-- Process Step 4 -->
+                    <div class="md:flex justify-between items-center">
+                        <div class="md:w-5/12"></div>
+                        <div class="hidden md:flex md:w-2/12 justify-center">
+                            <div class="h-12 w-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl z-0">4</div>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 animate-slide-in" style="animation-delay: 0.6s;">
+                            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                <div class="text-green-600 mb-3">
+                                    <i class="fas fa-lightbulb text-3xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Custom Solutions</h3>
+                                <p class="text-gray-600">Get tailored recommendations including organic alternatives, detox methods, and preventive measures for future protection.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pesticide Spotlight Section -->
+    <section id="resources" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Pesticide Safety Spotlight</h2>
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-0">
+                        <img src="ind1.jpeg" alt="Pesticide safety" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-700">Chlorpyrifos Safety Alert</h3>
+                        <p class="text-gray-600 mb-4">Recent studies show concerning neurotoxic effects from this commonly used pesticide. Many countries have banned its agricultural use.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700"><strong>Health Risks:</strong> Linked to developmental issues in children and neurological damage</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-seedling text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700"><strong>Common Crops:</strong> Corn, soybeans, fruit trees, and some vegetables</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-exchange-alt text-blue-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700"><strong>Safer Alternatives:</strong> Neem oil, Spinosad, or Bacillus thuringiensis (Bt)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-info-circle text-yellow-500"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        If you suspect Chlorpyrifos contamination, contact our experts for testing and soil remediation recommendations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="downloadPdf4('Pesticides_safety_guide.pdf')" class="text-green-600 font-medium hover:underline flex items-center cursor-pointer">
+                            Download Safety Guide <i class="fas fa-download ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function downloadPdf4() {
+            const pdfUrl = 'Pesticides_safety_guide.pdf';
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.download = 'Pesticides_Safety_Guide.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+    
+    <!-- Testimonial Section -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Trusted by Farmers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="ind2.jpeg" alt="Rajesh Kumar" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Rajesh Kumar</h4>
+                            <p class="text-green-200 text-sm">Rice Farmer, Punjab</p>
+                        </div>
+                    </div>
+                    <p class="italic">"AgroShield identified dangerous pesticide levels in my rice crop I didn't know about. Their organic alternatives saved my harvest!"</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="ind3.webp" alt="Maria Gonzalez" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Rahul Chaudhary</h4>
+                            <p class="text-green-200 text-sm">Vegetable Grower, Haryana</p>
+                        </div>
+                    </div>
+                    <p class="italic">"The pesticide residue analysis helped me export to Europe by meeting strict safety standards. Invaluable service!"</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="ind4.jpeg" alt="John Waweru" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Manoj Kumar</h4>
+                            <p class="text-green-200 text-sm">Maize Farmer, Bihar</p>
+                        </div>
+                    </div>
+                    <p class="italic">"Found out my crops had banned pesticides. AgroShield's detox plan saved my farm from complete loss."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer (Unchanged) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-bug mr-2"></i> AgroShield
+                    </h3>
+                    <p class="text-gray-400">Advanced solutions for pesticide identification and crop protection to support sustainable agriculture.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="identification.html" class="text-gray-400 hover:text-white transition duration-300">Identification</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-gray-400 hover:text-white transition duration-300">Pesticide Analysis</p></li>
+                        <li><p class="text-gray-400 hover:text-white transition duration-300">Residue Testing</p></li>
+                        <li><p class="text-gray-400 hover:text-white transition duration-300">Pest Identification</p></li>
+                        <li><p class="text-gray-400 hover:text-white transition duration-300">Consultation</p></li>
+                        <li><p class="text-gray-400 hover:text-white transition duration-300">Training</p></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://wwww.facebook.com/rajputanasingh846?sfnsn=wa" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="https://x.com/shah_divyanshu1" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="http://www.linkedin.com/in/aditya-singh-a98775291" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter for updates:</p>
+                    <div class="mt-3 flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-700 text-white rounded-l focus:outline-none w-full">
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-r hover:bg-green-700 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <a class="hover:text-white transition duration-300">Privacy Policy</a> | <a class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+        <div id="chatbot-box" class="hidden w-80 h-[500px] bg-white rounded-t-lg shadow-xl flex flex-col border border-gray-200">
+            <div class="bg-green-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+                <h3 class="font-semibold">AgroShield Assistant</h3>
+                <button id="close-chatbot" class="text-white hover:text-gray-200">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto space-y-3">
+                <div class="bg-green-100 rounded-lg p-3 text-sm">
+                    <p>Hello! I'm your AgroShield assistant. How can I help you with pesticide identification or crop protection today?</p>
+                </div>
+            </div>
+            <div class="p-3 border-t border-gray-200">
+                <div class="flex space-x-2">
+                    <input type="text" id="chatbot-input" placeholder="Type your question..." 
+                           class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+                    <button id="send-message" class="bg-green-600 text-white rounded-lg px-4 hover:bg-green-700 transition">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="mt-2 flex flex-wrap gap-2">
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect wheat crops?">
+                        Wheat
+                    </button>
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect maize crops?">
+                        Maize
+                    </button>
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect rice crops?">
+                        Rice
+                    </button>
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect potato crops?">
+                        Potato
+                    </button>
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect tomato crops?">
+                        Tomato
+                    </button>
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect apple trees?">
+                        Apple
+                    </button>
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect orange trees?">
+                        Orange
+                    </button>
+                    <button class="quick-question bg-gray-100 hover:bg-gray-200 text-xs px-2 py-1 rounded" data-question="How to protect banana plants?">
+                        Banana
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button id="chatbot-toggle" class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-green-700 transition">
+            <i class="fas fa-robot text-2xl"></i>
+        </button>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotToggle = document.getElementById('chatbot-toggle');
+            const chatbotBox = document.getElementById('chatbot-box');
+            const closeChatbot = document.getElementById('close-chatbot');
+            const chatbotInput = document.getElementById('chatbot-input');
+            const sendMessageBtn = document.getElementById('send-message');
+            const chatbotMessages = document.getElementById('chatbot-messages');
+            const quickQuestions = document.querySelectorAll('.quick-question');
+            
+            // Toggle chatbot visibility
+            chatbotToggle.addEventListener('click', function() {
+                chatbotBox.classList.toggle('hidden');
+            });
+            
+            // Close chatbot
+            closeChatbot.addEventListener('click', function() {
+                chatbotBox.classList.add('hidden');
+            });
+            
+            // Add message to chat
+            function addMessage(text, isUser) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('flex', 'flex-col');
+                
+                if (isUser) {
+                    messageDiv.classList.add('items-end');
+                    messageDiv.innerHTML = `
+                        <div class="bg-blue-100 rounded-lg p-3 text-sm max-w-[80%]">
+                            <p>${text}</p>
+                        </div>
+                        <span class="text-xs text-gray-500 mt-1">You</span>
+                    `;
+                } else {
+                    messageDiv.classList.add('items-start');
+                    messageDiv.innerHTML = `
+                        <div class="bg-green-100 rounded-lg p-3 text-sm max-w-[80%]">
+                            <p>${text}</p>
+                        </div>
+                        <span class="text-xs text-gray-500 mt-1">AgroShield</span>
+                    `;
+                }
+                
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+            
+            // Crop protection database
+            const cropDatabase = {
+                wheat: {
+                    pests: ["Aphids", "Armyworms", "Hessian fly", "Stem sawfly", "Wheat stem maggot"],
+                    protection: [
+                        "Use resistant varieties when available",
+                        "Practice crop rotation with non-cereal crops",
+                        "Remove volunteer wheat plants that can harbor pests",
+                        "Monitor fields regularly for early detection"
+                    ],
+                    pesticides: [
+                        "Imidacloprid (seed treatment for aphids)",
+                        "Lambda-cyhalothrin (for armyworms)",
+                        "Chlorpyrifos (for Hessian fly)",
+                        "Spinosad (organic option for multiple pests)"
+                    ]
+                },
+                maize: {
+                    pests: ["Corn earworm", "Fall armyworm", "Corn borers", "Rootworms", "Cutworms"],
+                    protection: [
+                        "Use Bt maize varieties where available",
+                        "Practice crop rotation with non-host crops",
+                        "Use pheromone traps for monitoring",
+                        "Destroy crop residues after harvest"
+                    ],
+                    pesticides: [
+                        "Bifenthrin (for earworms and armyworms)",
+                        "Chlorantraniliprole (for borers)",
+                        "Tefluthrin (soil insecticide for rootworms)",
+                        "Azadirachtin (organic neem-based option)"
+                    ]
+                },
+                rice: {
+                    pests: ["Rice stem borers", "Brown planthopper", "Rice leaf folder", "Rice water weevil", "Rice hispa"],
+                    protection: [
+                        "Maintain proper water management",
+                        "Use resistant varieties",
+                        "Practice synchronous planting in the area",
+                        "Encourage natural enemies like spiders and dragonflies"
+                    ],
+                    pesticides: [
+                        "Cartap hydrochloride (for stem borers)",
+                        "Buprofezin (for planthoppers)",
+                        "Fipronil (for leaf folder)",
+                        "Chlorpyriphos (for multiple pests)"
+                    ]
+                },
+                potato: {
+                    pests: ["Colorado potato beetle", "Potato tuber moth", "Aphids", "Wireworms", "Cutworms"],
+                    protection: [
+                        "Use certified disease-free seed potatoes",
+                        "Practice crop rotation with non-host crops",
+                        "Use floating row covers for physical protection",
+                        "Destroy cull piles and volunteer plants"
+                    ],
+                    pesticides: [
+                        "Spinetoram (for Colorado potato beetle)",
+                        "Abamectin (for tuber moth)",
+                        "Thiamethoxam (for aphids and other sucking pests)",
+                        "Cypermethrin (for multiple pests)"
+                    ]
+                },
+                tomato: {
+                    pests: ["Tomato fruit worm", "Whiteflies", "Aphids", "Thrips", "Spider mites"],
+                    protection: [
+                        "Use reflective mulches to deter pests",
+                        "Install yellow sticky traps for monitoring",
+                        "Encourage beneficial insects like lady beetles",
+                        "Remove infected plants promptly"
+                    ],
+                    pesticides: [
+                        "Indoxacarb (for fruit worms)",
+                        "Pyriproxyfen (for whiteflies)",
+                        "Acetamiprid (for aphids and thrips)",
+                        "Abamectin (for spider mites)"
+                    ]
+                },
+                apple: {
+                    pests: ["Codling moth", "Apple maggot", "Aphids", "Mites", "Plum curculio"],
+                    protection: [
+                        "Use pheromone traps for monitoring",
+                        "Prune trees to improve air circulation",
+                        "Remove dropped fruit regularly",
+                        "Apply horticultural oil during dormancy"
+                    ],
+                    pesticides: [
+                        "Acetamiprid (for aphids and other sucking pests)",
+                        "Lambda-cyhalothrin (for codling moth and apple maggot)",
+                        "Abamectin (for mites)",
+                        "Phosmet (for plum curculio)"
+                    ]
+                },
+                orange: {
+                    pests: ["Asian citrus psyllid", "Citrus leafminer", "Scale insects", "Aphids", "Mites"],
+                    protection: [
+                        "Monitor for early signs of pests",
+                        "Use reflective mulches to deter psyllids",
+                        "Prune infested branches",
+                        "Encourage natural enemies like lady beetles"
+                    ],
+                    pesticides: [
+                        "Imidacloprid (systemic for psyllids)",
+                        "Abamectin (for leafminer)",
+                        "Buprofezin (for scale insects)",
+                        "Spiromesifen (for mites)"
+                    ]
+                },
+                banana: {
+                    pests: ["Banana weevil", "Thrips", "Nematodes", "Aphids", "Spider mites"],
+                    protection: [
+                        "Use clean planting material",
+                        "Practice field sanitation",
+                        "Use pheromone traps for weevils",
+                        "Apply organic mulches"
+                    ],
+                    pesticides: [
+                        "Carbofuran (for weevils and nematodes)",
+                        "Imidacloprid (for aphids and thrips)",
+                        "Abamectin (for mites)",
+                        "Chlorpyrifos (for multiple pests)"
+                    ]
+                }
+            };
+    
+            // Generate bot response
+            function generateResponse(userMessage) {
+                const lowerMessage = userMessage.toLowerCase();
+                
+                // Check for specific crop queries
+                for (const crop in cropDatabase) {
+                    if (lowerMessage.includes(crop)) {
+                        const cropInfo = cropDatabase[crop];
+                        return `
+                            <strong>${crop.charAt(0).toUpperCase() + crop.slice(1)} Protection:</strong><br>
+                            <u>Common Pests:</u> ${cropInfo.pests.join(", ")}<br>
+                            <u>Protection Methods:</u><br>• ${cropInfo.protection.join("<br>• ")}<br>
+                            <u>Recommended Pesticides:</u><br>• ${cropInfo.pesticides.join("<br>• ")}<br>
+                            <em>Always follow label instructions and safety precautions when using pesticides.</em>
+                        `;
+                    }
+                }
+                
+                if (lowerMessage.includes('residue') || lowerMessage.includes('identify')) {
+                    return "We offer laboratory testing for pesticide residues using GC-MS and HPLC methods. You can send samples to our lab or use our mobile app for preliminary analysis.";
+                } else if (lowerMessage.includes('organic') || lowerMessage.includes('alternative')) {
+                    return "For organic alternatives, we recommend neem oil, pyrethrin (from chrysanthemums), or diatomaceous earth depending on your specific pest problem. Would you like recommendations for a particular crop?";
+                } else if (lowerMessage.includes('soil') || lowerMessage.includes('test')) {
+                    return "Soil testing involves collecting samples from multiple locations in your field. We provide detailed instructions and test kits. Results typically take 3-5 business days.";
+                } else if (lowerMessage.includes('safety') || lowerMessage.includes('danger')) {
+                    return "Many pesticides can be harmful if misused. Always follow label instructions, wear protective gear, and consider integrated pest management strategies to reduce reliance on chemicals.";
+                } else {
+                    return "I can provide detailed protection information for various crops. Please specify which crop you're interested in (wheat, maize, rice, potato, tomato, apple, orange, banana) or ask about general pest management.";
+                }
+            }
+            
+            // Handle user message
+            function handleUserMessage() {
+                const message = chatbotInput.value.trim();
+                if (message) {
+                    addMessage(message, true);
+                    chatbotInput.value = '';
+                    
+                    setTimeout(() => {
+                        const botResponse = generateResponse(message);
+                        addMessage(botResponse, false);
+                    }, 800);
+                }
+            }
+            
+            // Send message on button click
+            sendMessageBtn.addEventListener('click', handleUserMessage);
+            
+            // Send message on Enter key
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    handleUserMessage();
+                }
+            });
+            
+            // Quick question buttons
+            quickQuestions.forEach(button => {
+                button.addEventListener('click', function() {
+                    const question = this.getAttribute('data-question');
+                    chatbotInput.value = question;
+                    handleUserMessage();
+                });
+            });
+        });
+    </script>
+    <!-- JavaScript for mobile menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    
+
+</body>
+</html>

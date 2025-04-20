@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroShield | Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-bug text-2xl"></i>
+                <span class="text-xl font-bold"><a href="index.html" class="hover:text-green-200">AgroShield</a></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-green-200">Home</a>
+                <a href="services.html" class="hover:text-green-200">Services</a>
+                <a href="identification.html" class="hover:text-green-200">Identification</a>
+                <a href="resources.html" class="hover:text-green-200 font-semibold">Resources</a>
+                <a href="contact.html" class="hover:text-green-200">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-green-800 px-4 py-2" id="mobile-menu">
+            <a href="index.html" class="block py-2 hover:text-green-200">Home</a>
+            <a href="services.html" class="block py-2 hover:text-green-200">Services</a>
+            <a href="identification.html" class="block py-2 hover:text-green-200">Identification</a>
+            <a href="resources.html" class="block py-2 hover:text-green-200 font-semibold">Resources</a>
+            <a href="contact.html" class="block py-2 hover:text-green-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Resources Hero -->
+    <section class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500
+    text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Educational Resources</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Learn about pesticide safety, pest management, and sustainable farming practices.</p>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full mb-4">
+                    <span>Browse by Category</span>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">Knowledge Center</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="#guides" class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 group">
+                    <div class="text-green-600 mb-6 group-hover:text-green-700">
+                        <i class="fas fa-book-open text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-green-700">Guides & Manuals</h3>
+                    <p class="text-gray-600">Comprehensive guides on pesticide use, safety protocols, and integrated pest management strategies.</p>
+                </a>
+                
+                <a href="#pest-id" class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 group">
+                    <div class="text-green-600 mb-6 group-hover:text-green-700">
+                        <i class="fas fa-bug text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-green-700">Pest Identification</h3>
+                    <p class="text-gray-600">Visual databases and tools to help identify common agricultural pests and their damage patterns.</p>
+                </a>
+                
+                <a href="#regulations" class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 group">
+                    <div class="text-green-600 mb-6 group-hover:text-green-700">
+                        <i class="fas fa-balance-scale text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-green-700">Regulations</h3>
+                    <p class="text-gray-600">Current pesticide regulations, MRLs (Maximum Residue Limits), and compliance information.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Section -->
+<section id="guides" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Guides & Manuals</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Guide 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                <img src="s1.avif" alt="Organic farming" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-3">Integrated Pest Management Guide</h3>
+                    <p class="text-gray-600 mb-4">Learn about sustainable pest control methods that reduce pesticide reliance while maintaining crop health.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">PDF</span>
+                        <button onclick="downloadPdf1('ipm-guide.pdf')" class="text-green-600 font-medium hover:underline flex items-center cursor-pointer">
+                            Download <i class="fas fa-download ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guide 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                <img src="pesticide safety.jpeg" alt="Pesticide safety" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-3">Pesticide Safety Handbook</h3>
+                    <p class="text-gray-600 mb-4">Essential information on proper handling, storage, application, and disposal of agricultural pesticides.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">PDF</span>
+                        <button onclick="downloadPdf2('pesticide-safety-handbook.pdf')" class="text-green-600 font-medium hover:underline flex items-center cursor-pointer">
+                            Download <i class="fas fa-download ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guide 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                <img src="r1.avif" alt="Crop rotation" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-3">Alternative Pest Control Methods</h3>
+                    <p class="text-gray-600 mb-4">Explore biological controls, cultural practices, and other non-chemical pest management approaches.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">PDF</span>
+                        <button onclick="downloadPdf3('alternative-pest-control.pdf')" class="text-green-600 font-medium hover:underline flex items-center cursor-pointer">
+                            Download <i class="fas fa-download ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    function downloadPdf1() {
+        const link = document.createElement('a');
+        link.href = 'Pestmange.pdf';
+        link.download = 'Pestmange.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        console.log(`Downloaded: ${filename}`);
+        alert(`Downloading ${filename}...`);
+    }
+</script>
+
+<script>
+    function downloadPdf2() {
+        const link = document.createElement('a');
+        link.href = 'pesthandbook.pdf';
+        link.download = 'pesthandbook.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        console.log(`Downloaded: ${filename}`);
+        alert(`Downloading ${filename}...`);
+    }
+</script>
+
+<script>
+    function downloadPdf3() {
+        const link = document.createElement('a');
+        link.href = 'pestcontrol.pdf';
+        link.download = 'pestcontrol.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        console.log(`Downloaded: ${filename}`);
+        alert(`Downloading ${filename}...`);
+    }
+</script>
+
+    <!-- Pest ID Section -->
+    <section id="pest-id" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Pest Identification</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Common Agricultural Pests</h3>
+                    <p class="text-gray-600 mb-6">Use our visual guides to identify pests affecting your crops and learn about their life cycles, damage patterns, and control methods.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition duration-300">
+                            <div class="bg-green-100 text-green-800 rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Field Crop Pests</h4>
+                                <p class="text-sm text-gray-500">Insects and diseases affecting wheat, corn, soybeans, and other field crops</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition duration-300">
+                            <div class="bg-green-100 text-green-800 rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Fruit Pests</h4>
+                                <p class="text-sm text-gray-500">Common pests in orchards and berry crops</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition duration-300">
+                            <div class="bg-green-100 text-green-800 rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Vegetable Pests</h4>
+                                <p class="text-sm text-gray-500">Insects and diseases affecting vegetable crops</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Pest Damage Gallery</h3>
+                    <p class="text-gray-600 mb-6">Learn to recognize signs of pest damage and distinguish between insect feeding, disease symptoms, and nutrient deficiencies.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="https://ipm.ucanr.edu/agriculture/corn/corn-earworm/#gsc.tab=0" class="group">
+                            <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                                <div class="aspect-w-1 aspect-h-1 mb-2">
+                                    <img src="r2.jpeg" alt="Corn earworm" class="w-full h-full object-cover rounded">
+                                </div>
+                                <h4 class="text-sm font-medium group-hover:text-green-600">Corn Earworm Damage</h4>
+                            </div>
+                        </a>
+                        
+                        <a href="https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html" class="group">
+                            <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                                <div class="aspect-w-1 aspect-h-1 mb-2">
+                                    <img src="r3.jpg" alt="Aphids" class="w-full h-full object-cover rounded">
+                                </div>
+                                <h4 class="text-sm font-medium group-hover:text-green-600">Aphid Infestations</h4>
+                            </div>
+                        </a>
+                        
+                        <a href="https://vegento.russell.wisc.edu/pests/colorado-potato-beetle/" class="group">
+                            <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                                <div class="aspect-w-1 aspect-h-1 mb-2">
+                                    <img src="r4.jpeg" alt="Potato beetle" class="w-full h-full object-cover rounded">
+                                </div>
+                                <h4 class="text-sm font-medium group-hover:text-green-600">Potato Beetle Damage</h4>
+                            </div>
+                        </a>
+                        
+                        <a href="https://ipm.ucanr.edu/QT/spidermitescard.html#:~:text=Spider%20mites%20cause%20damage%20by,leaves%20turn%20a%20bronze%20color." class="group">
+                            <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                                <div class="aspect-w-1 aspect-h-1 mb-2">
+                                    <img src="r5.jpg" alt="Spider mites" class="w-full h-full object-cover rounded">
+                                </div>
+                                <h4 class="text-sm font-medium group-hover:text-green-600">Spider Mite Damage</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulations Section -->
+<section id="regulations" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Regulations & Compliance (India)</h2>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-flag text-green-600 mr-3"></i> Indian Regulations
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">Insecticides Act, 1968</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">FSSAI Pesticide Residue Limits</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">APEDA Organic Certification</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">Central Insecticides Board (CIB) Guidelines</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-globe-asia text-green-600 mr-3"></i> State-Level Regulations
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">State Pesticide Bans (e.g., Punjab, Kerala)</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">Local Agricultural Extension Guidelines</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">State Organic Farming Policies</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-alt text-green-500 mt-1 mr-2"></i>
+                            <a class="text-gray-600 hover:text-green-600 hover:underline">Farmer Producer Organization (FPO) Standards</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-calendar-alt text-green-600 mr-3"></i> Regulatory Updates
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-medium">2023 Pesticide Ban Updates</h4>
+                            <p class="text-sm text-gray-500">Recent bans on pesticides like Dicofol and Dinocap</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">New MRL Standards</h4>
+                            <p class="text-sm text-gray-500">Updated Maximum Residue Limits for export crops</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">PM KUSUM Scheme</h4>
+                            <p class="text-sm text-gray-500">Subsidies for sustainable agriculture practices</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Paramparagat Krishi Vikas Yojana</h4>
+                            <p class="text-sm text-gray-500">Organic farming certification updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional India-specific resources -->
+            <div class="p-6 bg-green-50 border-t border-green-100">
+                <h3 class="text-xl font-semibold mb-4 text-green-800">Important Indian Regulatory Bodies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-medium mb-2">Central Insecticides Board & Registration Committee (CIBRC)</h4>
+                        <p class="text-sm text-gray-600">Regulates pesticide import, manufacture, and use in India</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-medium mb-2">Food Safety and Standards Authority of India (FSSAI)</h4>
+                        <p class="text-sm text-gray-600">Sets pesticide residue limits in food products</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-medium mb-2">Agricultural and Processed Food Products Export Development Authority (APEDA)</h4>
+                        <p class="text-sm text-gray-600">Oversees organic certification for exports</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-medium mb-2">Ministry of Agriculture & Farmers Welfare</h4>
+                        <p class="text-sm text-gray-600">Implements national agricultural policies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500
+    text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for the latest resources, regulatory updates, and pest management tips.</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l focus:outline-none text-gray-800">
+                <button class="bg-green-800 text-white px-6 py-3 rounded-r font-semibold hover:bg-green-900 transition duration-300">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <!-- ... same footer content as index.html ... -->
+    </footer>
+
+    <!-- Chatbot (same as index.html) -->
+    <div class="chatbot-container">
+        <!-- ... same chatbot content as index.html ... -->
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

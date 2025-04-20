@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroShield | Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-green-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-bug text-2xl"></i>
+                <span class="text-xl font-bold"><a href="index.html" class="hover:text-green-200">AgroShield</a></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-green-200">Home</a>
+                <a href="services.html" class="hover:text-green-200 font-semibold">Services</a>
+                <a href="identification.html" class="hover:text-green-200">Identification</a>
+                <a href="resources.html" class="hover:text-green-200">Resources</a>
+                <a href="contact.html" class="hover:text-green-200">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-green-800 px-4 py-2" id="mobile-menu">
+            <a href="index.html" class="block py-2 hover:text-green-200">Home</a>
+            <a href="services.html" class="block py-2 hover:text-green-200 font-semibold">Services</a>
+            <a href="identification.html" class="block py-2 hover:text-green-200">Identification</a>
+            <a href="resources.html" class="block py-2 hover:text-green-200">Resources</a>
+            <a href="contact.html" class="block py-2 hover:text-green-200">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Services Hero with Background Image -->
+    <section class="relative text-white py-20">
+        <img src="s1.avif" 
+             alt="Agricultural fields" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-5xl font-bold mb-4 text-white">Our Comprehensive Services</h1>
+            <p class="text-2xl font-bold mb-8 max-w-2xl mx-auto text-white">Expert solutions for pesticide identification, residue analysis, and sustainable pest management.</p>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="pesticide.jpg" 
+                         alt="Pesticide testing" 
+                         class="w-full h-48 object-cover rounded-lg mb-6">
+                    <div class="text-green-600 mb-6">
+                        <i class="fas fa-search text-5xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Pesticide Identification</h2>
+                    <p class="text-gray-600 mb-6">Our advanced analytical methods can detect and identify pesticides in your crops with precision, helping you understand exactly what chemicals are present and at what concentrations.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Identification of unknown pesticide residues</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Quantification of pesticide levels</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Detection of banned or restricted substances</span>
+                        </li>
+                    </ul>
+                    <a href="identification.html" class="inline-block bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300">Request Analysis</a>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="laboratory.jpg" 
+                         alt="Laboratory analysis" 
+                         class="w-full h-48 object-cover rounded-lg mb-6">
+                    <div class="text-green-600 mb-6">
+                        <i class="fas fa-chart-line text-5xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Residue Analysis</h2>
+                    <p class="text-gray-600 mb-6">Ensure your crops meet domestic and international safety standards with our comprehensive pesticide residue testing services.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Compliance with MRLs (Maximum Residue Limits)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Export certification support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Organic certification testing</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Additional Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="s2.avif" 
+                         alt="Expert consultation" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Expert Consultation</h3>
+                    <p class="text-gray-600">Personalized advice from our agricultural scientists on pest management strategies tailored to your specific crops and conditions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="s3.avif" 
+                         alt="Training program" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-graduation-cap text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Training Programs</h3>
+                    <p class="text-gray-600">Comprehensive training for farm staff on pesticide safety, application techniques, and integrated pest management.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="s4.avif" 
+                         alt="Audit certification" 
+                         class="w-full h-48 object-cover rounded-lg mb-4">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-clipboard-check text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Audit & Certification</h3>
+                    <p class="text-gray-600">Independent verification of your pesticide management practices for compliance with industry standards and regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Process</h2>
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 h-full w-1 bg-green-200 transform -translate-x-1/2"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start relative mb-12">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                            <img src="" 
+                                 alt="Sample collection" 
+                                 class="w-full h-48 object-cover rounded-lg mb-4 md:hidden">
+                            <h3 class="text-xl font-semibold mb-2">Sample Collection</h3>
+                            <p class="text-gray-600">We guide you through proper sample collection or arrange for our team to collect samples from your farm.</p>
+                        </div>
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mx-4 relative z-10">
+                            <span class="text-xl font-bold">1</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block">
+                            <img src="s1.avif" 
+                                 alt="Sample collection" 
+                                 class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start relative mb-12">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block">
+                            <img src="laboratory.jpg" 
+                                 alt="Laboratory analysis" 
+                                 class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mx-4 relative z-10">
+                            <span class="text-xl font-bold">2</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <img src="laboratory.jpg" 
+                                 alt="Laboratory analysis" 
+                                 class="w-full h-48 object-cover rounded-lg mb-4 md:hidden">
+                            <h3 class="text-xl font-semibold mb-2">Laboratory Analysis</h3>
+                            <p class="text-gray-600">Samples undergo rigorous testing using HPLC, GC-MS, and other advanced analytical techniques.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start relative mb-12">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                            <img src="s5.avif" 
+                                 alt="Data analysis" 
+                                 class="w-full h-48 object-cover rounded-lg mb-4 md:hidden">
+                            <h3 class="text-xl font-semibold mb-2">Data Interpretation</h3>
+                            <p class="text-gray-600">Our experts analyze the results, comparing findings against regulatory limits and safety standards.</p>
+                        </div>
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mx-4 relative z-10">
+                            <span class="text-xl font-bold">3</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block">
+                            <img src="s5.avif" 
+                                 alt="Data analysis" 
+                                 class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start relative">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block">
+                            <img src="s6.jpeg" 
+                                 alt="Report delivery" 
+                                 class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mx-4 relative z-10">
+                            <span class="text-xl font-bold">4</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <img src="s6.jpeg" 
+                                 alt="Report delivery" 
+                                 class="w-full h-48 object-cover rounded-lg mb-4 md:hidden">
+                            <h3 class="text-xl font-semibold mb-2">Actionable Report</h3>
+                            <p class="text-gray-600">You receive a detailed report with findings, recommendations, and options for corrective actions if needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-16 bg-green-700 text-white">
+        <!-- <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+             alt="Agricultural fields" 
+             class="absolute inset-0 w-full h-full object-cover"> -->
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-6">Need Specific Testing?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contact us to discuss customized testing solutions for your agricultural operation.</p>
+            <a href="contact.html" class="inline-block bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-bug text-2xl text-green-400"></i>
+                        <span class="text-xl font-bold">AgroShield</span>
+                    </div>
+                    <p class="text-gray-400">Protecting your crops with advanced pesticide analysis and sustainable solutions.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="identification.html" class="text-gray-400 hover:text-white">Identification</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a class="text-gray-400 hover:text-white">Pesticide Analysis</a></li>
+                        <li><a class="text-gray-400 hover:text-white">Residue Testing</a></li>
+                        <li><a class="text-gray-400 hover:text-white">Consultation</a></li>
+                        <li><a class="text-gray-400 hover:text-white">Training</a></li>
+                        <li><a class="text-gray-400 hover:text-white">Certification</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-green-400"></i>
+                            <span>Gomti-nagar,Lucknow
+                                Uttar Pradesh
+                                India</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2 text-green-400"></i>
+                            <span>+91 7878787878</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-green-400"></i>
+                            <span>info@agroshield.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 AgroShield. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
