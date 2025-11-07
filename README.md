@@ -71,7 +71,7 @@ There is no API reference for the AgroShield website, as it is a static website 
 
 👤 Author
 ----------
-The AgroShield website was created by [Your Name], a web developer and agricultural enthusiast.
+The AgroShield website was created by Prajjwal Rai, a web developer and agricultural enthusiast.
 
 📝 License
 ----------
