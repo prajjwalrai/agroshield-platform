@@ -63,14 +63,7 @@ To test the AgroShield website, follow these steps:
 3. Verify that the search bar is working correctly by searching for specific topics or keywords.
 4. Test the contact form by filling out the form and submitting it to ensure that it is working correctly.
 
-📸 Screenshots
----------------
-Here are some screenshots of the AgroShield website:
 
-* **Homepage**: [placeholder image]
-* **Crop page**: [placeholder image]
-* **Services page**: [placeholder image]
-* **Resources page**: [placeholder image]
 
 📦 API Reference
 ----------------
